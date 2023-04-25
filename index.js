@@ -12,6 +12,10 @@ app.use(
 
 const baseUrl = "";
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.post("/sendEmail", async (req, res) => {
   if (!req.body.nome || !req.body.email || !req.body.mensagem)
     res.sendStatus(400);
