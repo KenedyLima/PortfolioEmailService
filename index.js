@@ -1,5 +1,6 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
+const cors = require("cors");
 require("dotenv").config();
 const PORT = process.env.PORT || 3001;
 
@@ -9,6 +10,8 @@ app.use(
     extended: false,
   })
 );
+
+app.use(cors());
 
 const baseUrl = "";
 
